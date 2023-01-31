@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EmployeePayroll</title>
+    <script defer src="Js\EmployeePayrollData.js"></script>
+    <script defer src="Js\new_payroll-form.js"></script>
 </head>
 <body>
     <header class="header-content header">
@@ -24,6 +26,7 @@
             <div class="row-content">
                 <label class="label text" for="name">Name</label>
                 <input class="input" type="text" id="name" name="name" placeholder="Your name.." required>
+                    <error-output class="text-error" for="text" style="font-size: 12px; font-style: italic;color: red"></error-output>
             </div>
             <div class="row-content">
                 <label class="label text"for="profile">Profile image</label>
@@ -148,14 +151,6 @@
                     <button type="reset"class="resetButton button">Reset</button>
                 </div>
             </div>
-            <script>
-                const salary = document.querySelector('#salary');
-                const output = document.querySelector('.salary-output');
-                output.textContent = salary.value;
-                salary.addEventListener('input', function () {
-                    output.textContent = salary.value;
-                })
-            </script>
         </form>
     </div>
 </body>
@@ -304,6 +299,12 @@
     .cancelButton{
         text-decoration: none;
         text-align: center;
+    }
+    error-output{
+        margin-left: 10px;
+        font-size: 12px;
+        font-style: italic;
+        color: red;
     }
 </style>
 </html>
